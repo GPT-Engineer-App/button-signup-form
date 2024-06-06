@@ -1,8 +1,20 @@
 import { Box, Button, Container, FormControl, FormLabel, Input, VStack, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = () => {
+    // Mock login validation
+    if (email === "user@example.com" && password === "password") {
+      navigate("/dashboard");
+    } else {
+      alert("Invalid credentials");
+    }
+  };
 
   const handleSignUpClick = () => {
     navigate("/signup");
@@ -15,13 +27,13 @@ const Login = () => {
           <Text fontSize="2xl">Login</Text>
           <FormControl id="email">
             <FormLabel>Email</FormLabel>
-            <Input type="email" />
+            <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </FormControl>
           <FormControl id="password">
             <FormLabel>Password</FormLabel>
-            <Input type="password" />
+            <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </FormControl>
-          <Button colorScheme="blue" width="full">Login</Button>
+          <Button colorScheme="blue" width="full" onClick={handleLogin}>Login</Button>
           <Button variant="link" onClick={handleSignUpClick}>Sign Up</Button>
         </VStack>
       </Box>
