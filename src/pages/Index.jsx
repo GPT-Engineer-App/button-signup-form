@@ -9,7 +9,7 @@ const Index = () => {
 
   const handleLogin = () => {
     // Mock login validation
-    if (email === "user@example.com" && password === "password") {
+    if (email === "test" && password === "test") {
       navigate("/home");
     } else {
       alert("Invalid credentials");
