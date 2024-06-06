@@ -17,7 +17,7 @@ const Index = () => {
   };
 
   const handleSignUpClick = () => {
-    navigate("/signup");
+    navigate("/home");
   };
 
   return (
