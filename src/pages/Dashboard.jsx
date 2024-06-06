@@ -6,7 +6,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate("/home");
   };
 
   const FileCard = ({ title, description }) => (
