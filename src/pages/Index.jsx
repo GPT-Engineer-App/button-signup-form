@@ -10,7 +10,7 @@ const Index = () => {
   const handleLogin = () => {
     // Mock login validation
     if (email === "user@example.com" && password === "password") {
-      navigate("/dashboard");
+      navigate("/home");
     } else {
       alert("Invalid credentials");
     }
