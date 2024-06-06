@@ -5,7 +5,7 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate("/login");
+    navigate("/home");
   };
 
   return (
@@ -30,7 +30,7 @@ const SignUp = () => {
             <Input type="password" />
           </FormControl>
           <Button colorScheme="blue" width="full">Sign Up</Button>
-          <Button variant="link" onClick={handleLoginClick}>Back to Login</Button>
+          <Button variant="link" onClick={handleLoginClick}>Back to Home</Button>
         </VStack>
       </Box>
     </Container>
